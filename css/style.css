@@ -1,0 +1,10 @@
+@import "variable.css";
+@import "reset.css";
+@import "login-header.css";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
