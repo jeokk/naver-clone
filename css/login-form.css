@@ -1,0 +1,219 @@
+.login-methods-tab {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 460px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #f8f9fa;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+}
+.login-methods-tab__login-method {
+  width: 33.3333333333333333333%;
+  height: 60px;
+  padding: 18px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-methods-tab__login-method:first-child {
+  &.active {
+    background: white;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+    border-left: none;
+  }
+  &.active ~ .login-methods-tab__login-method:nth-child(3) {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+.login-methods-tab__login-method:nth-child(2) {
+  &.active {
+    background: white;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+  }
+  &:has(~ .active) {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.login-methods-tab__login-method:nth-child(3) {
+  &.active {
+    background: white;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: none;
+    border-bottom: none;
+  }
+}
+
+.login-methods-tab__login-method i {
+  margin-right: 10px;
+}
+
+.login-methods-tab__login-method span {
+  white-space: nowrap;
+}
+.login-methods-tab__nudge {
+  position: absolute;
+  font-size: 10px;
+  border: 1px solid var(--naver-green);
+  border-radius: 15px;
+  padding: 5px 10px;
+  top: -15px;
+  right: -50px;
+  background-color: white;
+  color: var(--naver-green);
+  cursor: auto;
+}
+.login-methods-tab__nudge > span:last-child {
+  cursor: pointer;
+  z-index: 5;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 460px;
+  height: 255px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  box-sizing: border-box;
+  border-radius: 0 0 6px 6px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+}
+
+.login-form__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  font-size: 22px;
+}
+.login-form__row:first-child {
+  border-radius: 6px 6px 0 0;
+  margin-bottom: -1px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+}
+.login-form__row:first-child:focus-within,
+.login-form__row:nth-child(2):focus-within {
+  border: 1px solid var(--naver-green);
+  color: black;
+}
+.login-form__row:nth-child(2) {
+  border-radius: 0 0 6px 6px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 15px 20px;
+}
+.login-form__row:nth-child(3) {
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+.login-form__row input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 7px;
+}
+.login-form__column {
+  display: flex;
+  align-items: center;
+}
+
+.signed-in {
+  display: inline-flex;
+  align-items: center;
+}
+#signed-in {
+  appearance: none;
+}
+#signed-in::before {
+  content: "✓";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: gray;
+  border: 1px solid gray;
+}
+#signed-in:checked::before {
+  color: white;
+  background-color: var(--naver-deep-green);
+  border-color: var(--naver-deep-green);
+}
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+#ip-security {
+  appearance: none;
+  position: relative;
+  border-radius: 1.25em;
+  width: 2.5em;
+  height: 1.25em;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+}
+
+#ip-security::before {
+  content: "";
+  position: absolute;
+  left: 0.2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transform: scale(1.1);
+  background-color: white;
+  transition: left 150ms linear;
+}
+#ip-security:checked::before {
+  left: 1.3em;
+}
+
+#ip-security:checked {
+  background-color: var(--naver-deep-green);
+}
+.login-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background-color: var(--naver-deep-green);
+  border: 1px solid var(--naver-deep-green);
+  font-size: 18px;
+  font-weight: 800;
+  color: white;
+}
+
+.account-setting {
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account-setting li:nth-child(2)::before,
+.account-setting li:nth-child(3)::before {
+  content: "|";
+  padding: 0 20px;
+}

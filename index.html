@@ -19,8 +19,90 @@
           </select>
         </div>
       </header>
-      <main></main>
-      <footer></footer>
+      <main>
+        <div class="login-methods-tab">
+          <div class="login-methods-tab__login-method">
+            <span><i class="fa-solid fa-right-to-bracket"></i>ID 로그인</span>
+          </div>
+          <div class="login-methods-tab__login-method">
+            <span><i class="fa-solid fa-dice-one"></i>일회용 번호</span>
+          </div>
+          <div class="login-methods-tab__login-method active">
+            <span><i class="fa-solid fa-qrcode"></i>QR코드</span>
+          </div>
+          <div class="login-methods-tab__nudge">
+            <span>PC방 등 공용PC라면 QR코드 로그인이 더 안전해요.</span>
+            <span>X</span>
+          </div>
+        </div>
+        <form class="login-form" action="#" method="get">
+          <div class="login-form__row">
+            <i class="fa-regular fa-user fa-2xs"></i>
+            <input type="text" name="id" id="id" placeholder="아이디" />
+            <i
+              class="fa-solid fa-circle-xmark fa-2xs"
+              style="display: none"
+            ></i>
+          </div>
+          <div class="login-form__row">
+            <i class="fa-solid fa-lock fa-2xs"></i>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="비밀번호"
+            />
+            <i
+              class="fa-solid fa-circle-xmark fa-2xs"
+              style="display: none"
+            ></i>
+          </div>
+          <div class="login-form__row">
+            <div class="login-form__column">
+              <label class="signed-in">
+                <input type="checkbox" id="signed-in"
+              /></label>
+              <span>로그인 상태 유지</span>
+            </div>
+            <div class="login-form__column">
+              <span>IP보안</span>
+              <label class="switch">
+                <input role="switch" type="checkbox" id="ip-security" />
+              </label>
+            </div>
+          </div>
+          <div class="login-form__row">
+            <button class="login-submit">로그인</button>
+          </div>
+        </form>
+        <ul class="account-setting">
+          <li>비밀번호 찾기</li>
+          <li>아이디 찾기</li>
+          <li>회원 가입</li>
+        </ul>
+      </main>
+      <div class="banner">
+        <a href="#">
+          <img src="#" alt="banner image" />
+        </a>
+      </div>
+      <footer>
+        <ul>
+          <li>이용약관</li>
+          <li>개인정보처리방침</li>
+          <li>책임의 한계와 법적고지</li>
+          <li>회원정보 고객센터</li>
+        </ul>
+        <div class="copyright">
+          <a class="logo logo--xs" href="http://www.naver.com">NAVER</a>
+          <span>Copyright © NAVER Corp. All Rights Reserved.</span>
+        </div>
+      </footer>
     </div>
+    <script
+      src="https://kit.fontawesome.com/302e51725b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
