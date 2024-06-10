@@ -2,47 +2,5 @@
 @import "reset.css";
 @import "login-header.css";
 @import "login-form.css";
-
-.wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.banner {
-  margin-top: 40px;
-  margin-bottom: 70px;
-}
-.banner img {
-  width: 460px;
-  height: 150px;
-}
-
-footer ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  color: gray;
-  margin-bottom: 10px;
-}
-
-footer ul li:not(:first-child)::before {
-  content: "|";
-  padding: 0 5px;
-}
-footer ul li:nth-child(2) {
-  font-weight: 600;
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.copyright span {
-  font-size: 11px;
-  color: gray;
-  margin-left: 5px;
-}
+@import "login.css";
+@import "header.css";
